@@ -4,6 +4,6 @@ import { CommentariesController } from "../controller/CommentariesController";
 const commentariesRoute = Router();
 const commentariesController = new CommentariesController()
 
-commentariesRoute.post('/', commentariesController.create)
+commentariesRoute.post('/video/:video_id', commentariesController.create)
 
 export { commentariesRoute }

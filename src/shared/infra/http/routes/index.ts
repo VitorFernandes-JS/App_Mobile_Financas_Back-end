@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { commentariesRoute } from "../../../../modules/commentaries/infra/http/routes/commentaries.routes";
 
 const router = Router()
 
-router.get("/", (request, response) => {
-  response.send("Teste")
-})
+router.use("/commentary", commentariesRoute)
 
 export { router }

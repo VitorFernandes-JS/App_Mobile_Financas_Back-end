@@ -10,7 +10,11 @@ class CommentariesController {
 
     const createCommentaryService = container.resolve(CreateCommentaryService)
 
-    const commentary = createCommentaryService.execute({ user_id, video_id, description })
+    const commentary = createCommentaryService.execute({
+      user_id,
+      video_id,
+      description
+    })
 
     response.status(201).json(commentary)
   }

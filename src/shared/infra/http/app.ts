@@ -3,6 +3,7 @@ import { router } from './routes';
 import { AppDataSource } from '../../../data-source';
 
 import "reflect-metadata"
+import "../../container"
 
 AppDataSource.initialize()
   .then(() => {

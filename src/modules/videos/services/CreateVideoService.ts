@@ -1,10 +1,11 @@
 import { inject, injectable } from "tsyringe";
 import { ICreateVideoDTO } from "../dtos/ICreateVideoDTO";
+import { CategoryType } from "../infra/typeorm/entities/Video";
 import { IVideosRepository } from "../repositories/IVideosRepository";
 
 interface IRequest {
   url: string;
-  category: string;
+  category: CategoryType;
 }
 
 @injectable()

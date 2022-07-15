@@ -1,14 +1,16 @@
 import { Request, Response } from 'express'
 import { container } from 'tsyringe'
+import { CreateFavoriteVideoService } from '../../../services/CreateFavoriteVideoService'
 
-class CommentariesController {
+class FavoritesVideosController {
   async create(request: Request, response: Response): Promise<void> {
     // const { id } = request.user
     const { video_id } = request.params
 
-    // const createFavoriteVideoService = container.resolve()
+    const createFavoriteVideoService = container.resolve(CreateFavoriteVideoService)
 
     const favoriteVideo = createFavoriteVideoService.execute({
+      user_id: 'pegarAtravesDeMiddlewares',
       video_id,
     })
 
@@ -16,4 +18,4 @@ class CommentariesController {
   }
 }
 
-export { CommentariesController }
+export { FavoritesVideosController }

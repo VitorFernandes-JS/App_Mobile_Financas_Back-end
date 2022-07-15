@@ -1,5 +1,7 @@
 import { ICreateFavoritesVideosDTO } from "../dtos/ICreateFavoritesVideosDTO";
 
 interface IFavoritesVideosRepository {
-  create(video_id: string): Promise<ICreateFavoritesVideosDTO>
+  create({ user_id, video_id }: ICreateFavoritesVideosDTO): Promise<ICreateFavoritesVideosDTO>
 }
+
+export { IFavoritesVideosRepository }

@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { FavoritesVideosController } from "../controller/FavoritesVideosController";
 
 const favoritesVideosRoute = Router();
 const favoritesVideosController = new FavoritesVideosController()

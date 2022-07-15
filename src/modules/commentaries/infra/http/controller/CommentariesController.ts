@@ -6,12 +6,12 @@ class CommentariesController {
   async create(request: Request, response: Response): Promise<void> {
     // const { id } = request.user
     const { video_id } = request.params
-    const { user_id, description } = request.body
+    const { description } = request.body
 
     const createCommentaryService = container.resolve(CreateCommentaryService)
 
     const commentary = createCommentaryService.execute({
-      user_id,
+      user_id: "pegarIdAtravesDosMiddlewares",
       video_id,
       description
     })

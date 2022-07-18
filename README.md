@@ -47,7 +47,7 @@ Investment {
 
  // Criar uma tabela chamada: transactions_investments
 
- // Talvez deve-se criar uma tabela Total_Investment -> que faz relacionamento com Investment -> assim para cada Investment poderiamos pegar esse valor e obter o total nesta tabela. OBS: isso so faz sentido de o Investment so existir para cada Meta, ou seja um relacionamento entre eles.
+ // Talvez deve-se criar uma tabela Total_Investment -> que faz relacionamento com Investment -> assim para cada Investment poderiamos pegar esse valor e obter o total nesta tabela. OBS: isso so faz sentido se o Investment so existir para cada Meta, ou seja um relacionamento entre eles.
  ```
  <hr/>
 

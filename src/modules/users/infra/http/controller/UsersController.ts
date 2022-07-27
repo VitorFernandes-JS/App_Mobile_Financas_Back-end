@@ -5,7 +5,7 @@ import { CreateUserService } from '../../../services/CreateUserService';
 
 class UsersController {
 
-  async create(request: Request, response: Response) {
+  async create(request: Request, response: Response): Promise<void> {
     const { email, name } = request.body
 
     const createUserService = container.resolve(CreateUserService)
@@ -15,7 +15,7 @@ class UsersController {
     response.status(201).json(user)
   }
 
-  async authenticate(request: Request, response: Response) {
+  async authenticate(request: Request, response: Response): Promise<void> {
     const { email } = request.body
 
     const authenticateUserService = container.resolve(AuthenticateUserService)

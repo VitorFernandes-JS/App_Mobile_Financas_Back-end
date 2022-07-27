@@ -9,7 +9,7 @@ class FavoritesVideosController {
 
     const createFavoriteVideoService = container.resolve(CreateFavoriteVideoService)
 
-    const favoriteVideo = createFavoriteVideoService.execute({
+    const favoriteVideo = await createFavoriteVideoService.execute({
       user_id: 'pegarAtravesDeMiddlewares',
       video_id,
     })
